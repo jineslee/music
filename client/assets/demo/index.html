@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src='jquery.js'></script>
+  <script>
+    $(function () {
+     $('#ipt').click(
+        $.ajax({
+          type:'get',
+          url:'http://apis.baidu.com/geekery/music/query?s=%E5%8D%81%E5%B9%B4&size=10&page=1'  -H 'apikey:您自己的apikey',
+          data:{
+            search:$('#ipt').val()
+          },
+          dataType:'jsonp',
+          success:function (data) {
+            $('body').html(data);
+          }
+        })
+      )
+    })
+  </script>
+</head>
+<body>
+    <input type="search" name="" id="ipt">
+    <input type="button" value="搜索">
+</body>
+</html>

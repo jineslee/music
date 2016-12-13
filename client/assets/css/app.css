@@ -1,0 +1,364 @@
+html,
+body {
+  height: 100%;
+  /*overflow: hidden;*/
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  cursor: default;
+  -webkit-user-select: none;
+  color: #262b2f;
+}
+
+::-webkit-scrollbar {
+  width: 0rem;
+  -webkit-appearance: none;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: .3rem;
+  background-color: #aaa;
+}
+a{
+  color:#262b2f;
+}
+a:focus,
+button:focus,
+input[type=range]:focus {
+  outline: 0;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 0;
+  width: 100%;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: .125rem;
+  cursor: pointer;
+  /*animate: 0.2s;*/
+  /*box-shadow: 0px 0px 0px #000000;*/
+  /*border: 1px solid #39404D;*/
+  background: #39404D;
+  border-radius: 1px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #ff7600;
+  height: .8rem;
+  width: .8rem;
+  border-radius: 50%;
+  background: #fd9500;
+  cursor: pointer;
+  margin-top: -.3375rem;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  /*background: #fff;*/
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  background-color:#fff;
+}
+  /*header*/
+.header{
+  display: flex;
+  height: 5rem;
+  background-color: #FF5E00;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header > button,
+.header > a {
+  color: #fff;
+  background-color: transparent;
+  
+  padding: 0.2rem;
+}
+.header>.download{
+  width:7.5rem;
+  border-radius:1.8rem;
+  margin-right: .875rem;
+  background-color: #fff;
+  color:#ff5800;
+  text-align: center;
+  line-height: 1.8rem;
+  font-size: 1rem;
+  float: right;
+}
+.header > h1 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  padding: 1rem;
+  margin: 0;
+}
+  /*nav*/
+.nav{
+  width: 100%;
+  height:2.5rem;
+  box-shadow: 0 2px 3px rgba(0,0,0,.2);
+  background-color:rgba(249,249,249,.9);
+  background-image: linear-gradient(to bottom,rgba(249,249,249,.8),rgba(235,235,235,.8));
+  display:flex;
+}
+.nav>.item{
+  flex:1;
+  display: block;
+  text-align: center;
+  line-height: 2.5rem;
+  color:#262b2f;
+}
+.nav .active{
+  color:#ff5800;
+  box-shadow: inset 0 -2px 0 #ff5800;
+}
+  /*main*/
+.main{
+  width:100%;
+ 
+}
+.main>.banner{
+ width: 100%;
+ display: block;
+}
+.main>.banner>img{
+  width: 100%;
+  display: block;
+}
+.main .item{
+  padding:0.75rem;
+  border-bottom: .0625rem solid rgba(100, 100, 100, .2);
+}
+.main .item .song-name {
+  font-size: 1rem;
+  font-weight: normal;
+}
+.main .item .artist{
+  font-size: .875rem;
+  color: #afafb0;
+  line-height: 1.5;
+}
+.main .list li:active {
+  background-color: rgba(200, 200, 200, .2);
+}
+.main li.top,.main li.artist{
+  line-height: 2.5rem;
+}
+.main li.top img{
+  width: 2.5rem;
+  height: 2.5rem;
+  float: left;
+  line-height: 2.5rem;
+  margin-right: .3rem;
+}
+.main li.top h3,.main li.artist h3{
+  font-weight: normal;
+  font-size: 1rem;
+  color: #000;
+}
+.main li.top .next,.main li.artist .next{
+  content:"";
+  float: right;
+  margin-top:.875rem;
+  border:.1rem solid gray;
+  width: .875rem;
+  height: .875rem;
+  transform: rotate(135deg);
+  border-width:.1rem 0 0 .1rem;
+}
+/*搜索*/
+.main .search{
+  padding: 0.875rem;
+  position:relative;
+}
+.main .search .keyipt{
+  border:#d9d9d9 .1rem solid;
+  border-radius:.5rem;
+  background-color: #f4f5f7;
+  margin-right:4.5rem;
+}
+.main .keyipt input{
+  padding:.2rem 1rem .2rem 2rem;
+  background-color:rgba(255,255,255,0);
+  width: 100%;
+  font-size: 0.8rem;
+  height: 2.25rem;
+  border:0;
+  outline: 0;
+}
+.main .keyipt .ipt-search::before{
+   content: '';
+   display: block;
+   width:0.75rem;
+   height:0.75rem;
+   position:absolute;
+   top:50%;
+   left:.9375rem;
+   margin-top: -0.375rem;
+   background-image:url("../images/search.png");
+}
+.main .search .btn-search{
+  position: absolute;
+  bottom:1rem;
+  right: 1rem;
+  width: 4rem;
+  height: 2.25rem;
+  line-height: 2.25rem;
+  background-color: #fc9b0b;
+  background-image: linear-gradient(to bottom,#fda10d,#f77700);
+  font-size: 1rem;
+  text-align: center;
+  border:0;
+  color:#fff;
+  border-radius: 0.5rem;
+}
+.main .hot-key{
+  background-color: #f4f5f7;
+  border-top: #d9d9d9 .1rem solid;
+}
+.main .hot-key .tit{
+  font-size: 1rem;
+  padding: 0.75rem;
+  margin: 0;
+  font-weight: 400;
+  color: #000;
+}
+.main li.search .index{
+  float: left;
+  font-size: 1rem;
+  width: 2rem;
+  margin-left: -1.5rem;
+  margin-right: 1rem;
+  height: 2rem;
+  text-align: right;
+  font-style:italic;
+}
+
+
+/* player page */
+.main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-top: .0625rem solid rgba(100, 100, 100, .1);
+}
+
+
+.item-header {
+  width: 100%;
+  height: 3rem;
+  line-height: 3rem;
+  box-shadow:0 2px 3px rgba(0,0,0,.2);
+  background-color:rgb(249,249,249);
+  background-image: linear-gradient(to bottom,rgba(249,249,249,.8),rgba(235,235,235,.8));
+}
+.fa-angle-left{
+  position:relative;
+  float: left;
+  font-size: 2.4rem;
+  line-height: 3rem;
+  margin-left: .5rem;
+}
+.item-header .item-title{
+  line-height:3rem;
+  text-align: center;
+  color:#262b2f;
+  font-size: 1.2rem;
+}
+
+.player {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color:rgba(0,0,0,0.6);
+}
+
+.player .disc {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.player .disc img {
+  width: 10rem;
+  border-radius: 50%;
+  border: .0625rem solid #fd9500;
+  padding: .1rem;
+  transition: transform .5s linear;
+}
+
+.player .disc .duration {
+  font-size: 1.5rem;
+  color: rgba(253, 149, 0, 1);
+  margin-top: -1.5em;
+  z-index: 1;
+}
+
+.player .title {
+  font-size: 1.6rem;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #fd9500;
+  margin: 0 0 .5rem;
+}
+
+.player .artist {
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+}
+
+.player .lyric {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.player .lyric .previous,
+.player .lyric .next {
+  color: rgba(255, 255, 255, .3);
+}
+
+.player .lyric .current {
+  font-size: 1.1rem;
+}
+
+.player .controls {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(10, 10, 10, .2);
+  padding: .5rem;
+  font-size: 2rem;
+}
+
+.player .controls button {
+  border: 0;
+  background-color: transparent;
+  color: #fff;
+  width: 2.8125rem;
+}
+
+.player .controls button.active {
+  color: #fd9500;
+}

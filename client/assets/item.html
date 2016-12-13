@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Now Playing</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <style>
+  
+  </style>
+</head>
+
+<body class="page " id='body'>
+  <header class="item-header" id='header'>
+    <a href="index.html"><i class="fa fa-angle-left"></i></a>
+    <div class="item-title">爱情转移</div>
+  </header>
+  <section class="main animated slideInRight">
+    <div class="player">
+      <div class="disc">
+        <img src="images/artist/陈奕迅.jpg" alt="陈奕迅">
+        <span class="duration">4:20</span>
+      </div>
+      <h2 class="title">爱情转移</h2>
+      <h3 class="artist">陈奕迅</h3>
+      <div class="lyric">
+        <p class="previous">徘徊过多少橱窗,住过多少旅馆</p>
+        <p class="current">才会觉得分离也并不冤枉</p>
+        <p class="next">感情是用来浏览还是用来珍藏</p>
+      </div>
+      <input type="range" value="0">
+      <div class="controls">
+        <button><i class="fa fa-retweet"></i></button>
+        <button class="active"><i class="fa fa-backward"></i></button>
+        <button class="active"><i class="fa fa-play"></i></button>
+        <button class="active"><i class="fa fa-forward"></i></button>
+        <button class="active"><i class="fa fa-random"></i></button>
+      </div>
+    </div>
+  </section>
+</body>
+<script>
+  var body=document.getElementById('body')
+  var header=document.getElementById('header')
+  header.children[0].onclick=function() {
+     body.className+=" animated fadeOutRightBig";
+  }
+</script>
+</html>
